@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #e3f2fd, #bbdefb, #90caf9);
+            background-size: 400% 400%;
+            animation: gradientMove 12s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .dashboard-container {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            width: 85%;
+            max-width: 950px;
+            padding: 60px;
+            text-align: center;
+            animation: fadeUp 1s ease;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0d47a1;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+        }
+
+        .btn {
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 14px 35px;
+            margin: 15px;
+            width: 250px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn-outline-primary {
+            color: #1976d2;
+            border-color: #1976d2;
+        }
+        .btn-outline-primary:hover {
+            background-color: #1976d2;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .btn-outline-success {
+            color: #2e7d32;
+            border-color: #2e7d32;
+        }
+        .btn-outline-success:hover {
+            background-color: #2e7d32;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .btn-outline-warning {
+            color: #f9a825;
+            border-color: #f9a825;
+        }
+        .btn-outline-warning:hover {
+            background-color: #f9a825;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 8px;
+            transition: transform 0.3s;
+        }
+
+        .btn:hover .icon {
+            transform: scale(1.2);
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #546e7a;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-container {
+                padding: 40px 20px;
+                width: 90%;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .btn {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="dashboard-container">
+    <h1>🏥 Hospital Management System</h1>
+
+    <div class="d-flex flex-wrap justify-content-center">
+        <a href="/doctors" class="btn btn-outline-primary">
+            <span class="icon">👨‍⚕️</span>
+            Manage Doctors
+        </a>
+        <a href="/patients" class="btn btn-outline-success">
+            <span class="icon">🧑‍🤝‍🧑</span>
+            Manage Patients
+        </a>
+        <a href="/appointments" class="btn btn-outline-warning">
+            <span class="icon">📅</span>
+            Appointments
+        </a>
+    </div>
+
+    <footer>© 2025 HospitalCare System | Designed with ❤️ by Rashmi</footer>
+</div>
+</body>
+</html>
